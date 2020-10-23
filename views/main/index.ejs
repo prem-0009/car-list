@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>add a car</h1>
-    <form action="/cars/add-car" method="POST">
+    <form style="background-color: burlywood;" action="/cars/add-car" method="POST">
         <div>
             <label for="name">name:</label>
             <input type="text" id="name" name="name">
@@ -16,16 +16,19 @@
             <label for="type">type:</label>
             <input type="text" id="type" type="type">
         </div>
-        <div>
+        <!-- <div>
             <label for="year">year:</label>
-            <input type="number" id="year" year="year">
-        </div>
-        <button type="submit"> add a car</button>
+            <input type="text" id="year" year="year">
+        </div> -->
+        <button style="margin-bottom:10px" type="submit"> add a car</button>
+        
+    </form>
+    <% carList.forEach(element => { %>
+     <li style="background-color: orange;"><%= element.name %> </li>
+     <%= element %> 
+    <% }) %>
         
 
-    
-    </form>
-    
     
 </body>
 </html>
